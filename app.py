@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-bian_data = []
+bian_data = [] # List to store data
 
 @app.route("/", methods=['GET'])
 def index():
@@ -14,7 +14,8 @@ def hasil():
         BianNik = request.form['BianNik']    # Changed () to []
         
         if BianNama and BianNik:
-            bian_data.append({'BianNama': BianNama, 'BianNik': BianNik}) # ini adalah array 
+            bian_data.append({'BianNama': BianNama, 'BianNik': BianNik}) # ini adalah fungsi untuk menambahkan data ke dalam list bian_data
+            
             
     return render_template('hasil.html', data=bian_data)
 
