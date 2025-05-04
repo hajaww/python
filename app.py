@@ -14,7 +14,7 @@ def hasil():
         BianNik = request.form['BianNik']    # Changed () to []
         
         if BianNama and BianNik:
-            bian_data.append({'BianNama': BianNama, 'BianNik': BianNik})
+            bian_data.append({'BianNama': BianNama, 'BianNik': BianNik}) # ini adalah array 
             
     return render_template('hasil.html', data=bian_data)
 
